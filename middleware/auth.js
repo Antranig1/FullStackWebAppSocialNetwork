@@ -1,5 +1,10 @@
+const express = require('express');
+const router = express.Router();
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const config = require('config');
+const { check, validationResult } = require('express-validator');
+const User = require('../models/User');
 
 module.exports = function(req, res ,next){
     //Get token from header
@@ -21,4 +26,5 @@ module.exports = function(req, res ,next){
     }catch(err){
         res.stauts(401).json({msg:'Token is not vaild'});
     }
+
 };
