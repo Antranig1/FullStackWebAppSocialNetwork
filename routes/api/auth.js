@@ -7,7 +7,7 @@ const config = require('config');
 const { check, validationResult } = require('express-validator');
 const User = require('../../models/User');
 //@route  Get api/auth
-//@desc   Test route
+//@desc   Get username and email
 //@access Pubic
 router.get('/', auth, async (req, res) => {
     try {
