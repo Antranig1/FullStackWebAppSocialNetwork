@@ -8,6 +8,7 @@ import {
   LOGIN_FAIL,
   LOGOUT,
   CLEAR_PROFILE,
+  CLEAR_USER
 } from './types';
 import { setAlert } from './alert';
 
@@ -92,5 +93,8 @@ export const logout = () => (dispatch) => {
   });
   dispatch({
     type: LOGOUT,
+  });
+  dispatch({
+    type: CLEAR_USER,
   });
 };
