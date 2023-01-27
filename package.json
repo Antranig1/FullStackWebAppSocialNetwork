@@ -8,7 +8,6 @@
     "server": "nodemon server",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "predeploy":"npm start && NPM_CONFIG_PRODUCTION=false npm install --prefix /var/task/client/build/ && npm run build --prefix /var/task/client/build/",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix /client && npm run build --prefix /client"
   },
   "engines": {
