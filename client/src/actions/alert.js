@@ -1,4 +1,4 @@
-import uuid from 'uuid';
+import * as uuid from 'uuid';
 import { SET_ALERT, REMOVE_ALERT } from './types';
 
 
